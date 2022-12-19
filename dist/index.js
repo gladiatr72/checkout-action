@@ -7468,7 +7468,7 @@ class GitCommandManager {
     }
     checkout(ref, startPoint) {
         return __awaiter(this, void 0, void 0, function* () {
-            const args = ['checkout', '--progress', '--force'];
+            const args = ['checkout', '--force'];
             if (startPoint) {
                 args.push('-B', ref, startPoint);
             }
@@ -7513,7 +7513,7 @@ class GitCommandManager {
             if (!refSpec.some(x => x === refHelper.tagsRefSpec)) {
                 args.push('--no-tags');
             }
-            args.push('--prune', '--progress', '--no-recurse-submodules');
+            args.push('--prune', '--no-recurse-submodules');
             if (fetchDepth && fetchDepth > 0) {
                 args.push(`--depth=${fetchDepth}`);
             }
